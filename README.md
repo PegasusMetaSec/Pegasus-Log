@@ -12,7 +12,6 @@
   <img src="https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-red?style=flat-square">
 </div>
 
-  <i>Advanced Web-Based Log Management System with Real-Time Monitoring</i>
 </p>
 
 <p align="center">
