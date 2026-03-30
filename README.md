@@ -44,4 +44,21 @@
 
 ### Frontend
 ```mermaid
-<div align="center"> <img src="https://raw.githubusercontent.com/yourusername/pegasuslog-website/main/docs/architecture.png" alt="PegasusLog Architecture" width="80%"> <br> <i>Python-powered microservices architecture with real-time processing</i> </div>
+graph TB
+    subgraph "Python Processing Layer"
+        A[FastAPI Server] --> B[Log Ingestion]
+        B --> C[Async Processing]
+        C --> D[Pattern Analysis]
+        D --> E[ML Anomaly Detection]
+        E --> F[Real-time Dashboard]
+    end
+    
+    subgraph "Data Storage"
+        G[(PostgreSQL)] --> H[Log Storage]
+        I[(Redis)] --> J[Cache Layer]
+        K[(Elasticsearch)] --> L[Search Index]
+    end
+    
+    C --> G
+    C --> I
+    D --> K
