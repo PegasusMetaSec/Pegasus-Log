@@ -1,52 +1,76 @@
 <div align="center">
-  <img src="https://img.shields.io/badge/PegasusLog-FF6B6B?style=for-the-badge&logo=github&logoColor=white" alt="PegasusLog Banner">
-  <br>
-  <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square">
-  <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square">
-  <img src="https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-red?style=flat-square">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&duration=3000&pause=1000&color=FF6B6B&center=true&vCenter=true&width=500&lines=PegasusLog;Advanced+Log+System;Real-Time+Monitoring" alt="Typing SVG" />
+  
+  <img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/FastAPI-0.95+-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/React-18.0+-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
+  <img src="https://img.shields.io/badge/PostgreSQL-15-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
 </div>
 
-<h1 align="center">🚀 PegasusLog Website</h1>
-<p align="center">
-  <i>Advanced Web-Based Log Management System with Real-Time Monitoring</i>
-</p>
-
-<p align="center">
-  <img src="https://via.placeholder.com/800x400/1a1a2e/ffffff?text=PegasusLog+Dashboard" alt="PegasusLog Dashboard Preview" width="80%">
-</p>
-
 ---
 
-## ✨ Features
+## 🐍 Python-Powered Backend
 
-### 🎯 Core Features
-- **Real-Time Log Monitoring** - Live log streaming with WebSocket integration
-- **Advanced Filtering** - Filter logs by severity, source, date, and custom keywords
-- **Visual Analytics** - Beautiful charts and graphs for log analysis
-- **Multi-Format Export** - Export logs to JSON, CSV, or PDF formats
+PegasusLog menggunakan **Python** sebagai backbone utama untuk pemrosesan log yang powerful dan efisien:
 
-### 🔒 Security
-- **JWT Authentication** - Secure user authentication system
-- **Role-Based Access** - Admin, Moderator, and Viewer roles
-- **Audit Trail** - Complete logging of all user actions
-- **Encrypted Storage** - AES-256 encryption for sensitive log data
+```python
+# core/pegasus_engine.py
+from typing import Dict, List, Optional
+from datetime import datetime
+import asyncio
+import json
+from dataclasses import dataclass
 
-### 🎨 User Experience
-- **Dark/Light Mode** - Eye-friendly theme switching
-- **Responsive Design** - Fully functional on desktop, tablet, and mobile
-- **Keyboard Shortcuts** - Power user shortcuts for efficiency
-- **Custom Dashboards** - Personalized dashboard layouts
+@dataclass
+class LogEntry:
+    """Enhanced log entry with metadata"""
+    timestamp: datetime
+    severity: str
+    source: str
+    message: str
+    metadata: Dict[str, any]
+    trace_id: Optional[str] = None
 
----
-
-## 🛠️ Technology Stack
-
-### Frontend
-```mermaid
-graph LR
-    A[React 18] --> B[TypeScript]
-    A --> C[TailwindCSS]
-    A --> D[Redux Toolkit]
-    A --> E[Chart.js]
-    A --> F[WebSocket]
+class PegasusLogEngine:
+    """Core log processing engine with Python async capabilities"""
+    
+    def __init__(self):
+        self.logs: List[LogEntry] = []
+        self.filters = {}
+        self._setup_async_handlers()
+    
+    async def process_log(self, log_data: Dict) -> LogEntry:
+        """Process incoming log with Python's async/await"""
+        log_entry = LogEntry(
+            timestamp=datetime.utcnow(),
+            severity=log_data.get('severity', 'INFO'),
+            source=log_data.get('source'),
+            message=log_data.get('message'),
+            metadata=log_data.get('metadata', {}),
+            trace_id=log_data.get('trace_id')
+        )
+        
+        # Real-time processing
+        await self._analyze_patterns(log_entry)
+        await self._apply_filters(log_entry)
+        await self._store_log(log_entry)
+        
+        return log_entry
+    
+    async def _analyze_patterns(self, log: LogEntry):
+        """AI-powered log pattern analysis"""
+        patterns = {
+            'error_rate': await self._calculate_error_rate(),
+            'anomaly_score': await self._detect_anomalies(log),
+            'correlation': await self._find_correlations(log)
+        }
+        
+        if patterns['anomaly_score'] > 0.8:
+            await self._trigger_alert(log, patterns)
+    
+    async def stream_logs(self):
+        """Async generator for real-time log streaming"""
+        while True:
+            if self.logs:
+                yield self.logs[-1]
+            await asyncio.sleep(0.1)
