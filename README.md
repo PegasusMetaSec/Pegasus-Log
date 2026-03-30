@@ -1,4 +1,9 @@
-<div align="center">
+
+
+<h1 align="center">🚀 PegasusLog Website</h1>
+<p align="center">
+
+  <div align="center">
   <img src="https://img.shields.io/badge/PegasusLog-FF6B6B?style=for-the-badge&logo=github&logoColor=white" alt="PegasusLog Banner">
   <br>
   <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square">
@@ -7,8 +12,6 @@
   <img src="https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-red?style=flat-square">
 </div>
 
-<h1 align="center">🚀 PegasusLog Website</h1>
-<p align="center">
   <i>Advanced Web-Based Log Management System with Real-Time Monitoring</i>
 </p>
 
