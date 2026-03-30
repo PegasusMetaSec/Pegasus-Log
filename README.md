@@ -16,9 +16,8 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/12b57a02-ad6e-4a39-9a4e-21047bef4a07
-" alt="PegasusLog Dashboard Preview" width="80%">
-</p>
+  
+<img width="1919" height="898" alt="Screenshot 2026-03-30 214506" src="https://github.com/user-attachments/assets/49a50101-4a95-402e-94fa-c8d3ae31167f" />
 
 ---
 
