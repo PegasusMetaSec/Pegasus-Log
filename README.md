@@ -1,3 +1,4 @@
+![WhatsApp Image 2026-03-30 at 21 52 03](https://github.com/user-attachments/assets/b860ce78-872a-426e-881d-fa69b9fbe1d4)
 
 
 <h1 align="center">🚀 PegasusLog Website</h1>
@@ -15,7 +16,8 @@
 </p>
 
 <p align="center">
-  <img src="https://via.placeholder.com/800x400/1a1a2e/ffffff?text=PegasusLog+Dashboard" alt="PegasusLog Dashboard Preview" width="80%">
+  <img src="https://github.com/user-attachments/assets/12b57a02-ad6e-4a39-9a4e-21047bef4a07
+" alt="PegasusLog Dashboard Preview" width="80%">
 </p>
 
 ---
