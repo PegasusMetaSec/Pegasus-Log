@@ -4,6 +4,10 @@
 <h1 align="center">🚀 PegasusLog Website</h1>
 <p align="center">
 
+<div align="center">
+<a href="https://trendshift.io/repositories/14638" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14638" alt="HKUDS%2FAI-Researcher | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+</div>
+
   <div align="center">
   <img src="https://img.shields.io/badge/PegasusLog-FF6B6B?style=for-the-badge&logo=github&logoColor=white" alt="PegasusLog Banner">
   <br>
